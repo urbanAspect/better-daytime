@@ -14,8 +14,7 @@ def adjustGrayscale(array: np.ndarray):
 
 array = demFile.readFile("../testdata/Copernicus_DSM_10_N00_00_E020_00_DEM.dt2")
 merged_data = demFile.mergeElevationData("../testdata/Copernicus_DSM_10_N45_00_E015_00_DEM.dt2", "../testdata/Copernicus_DSM_10_N46_00_E015_00_DEM.dt2", "../testdata/Copernicus_DSM_10_N45_00_E013_00_DEM.dt2", "../testdata/Copernicus_DSM_10_N46_00_E014_00_DEM.dt2")
-# 
 
-plt.imshow(np.rot90(merged_data, axes=(0, 1)), cmap='gray_r', interpolation='nearest')
+plt.imshow(merged_data, cmap='gray_r', interpolation='nearest')
 plt.colorbar()
 plt.show()
